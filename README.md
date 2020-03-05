@@ -2,26 +2,39 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
 
-## Development server
+## setting up angular carousel project
+First install latest version of the angulat cli -> npm install -g@angualr/cli@latest
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## create project
+ng new project name
 
-## Code scaffolding
+## configure carousel package 
+install NgbBootstrap library
+npm install --save @ng-bootstrap/ng-bootstrap
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Also, install bootstrap 
+npm install bootstrap
 
-## Build
+Now, add bootstrap in style.scss file
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Most important, Don't forget to add NgbModule in the main module and import in app.module.ts file 
 
-## Running unit tests
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
