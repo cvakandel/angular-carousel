@@ -15,7 +15,7 @@ npm install --save @ng-bootstrap/ng-bootstrap
 Also, install bootstrap 
 npm install bootstrap
 
-Now, add bootstrap in style.scss file
+Now, add bootstrap in style.scss file\
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 Most important, Don't forget to add NgbModule in the main module and import in app.module.ts file 
